@@ -4,6 +4,7 @@ const WebSocket = require('ws');
 const path = require('path');
 const EventHubReader = require('./scripts/event-hub-reader.js');
 
+//const iotHubConnectionString = process.env.IotHubConnectionString;
 const iotHubConnectionString = "HostName=Grove-lora-e5-wio-terminal.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=5DYa9TlymrWLCIY9wzZLOsUZP5Ioa9WM+mFIuuFfJZ0=";
 if (!iotHubConnectionString) {
   console.error(`Environment variable IotHubConnectionString must be specified.`);
@@ -11,6 +12,7 @@ if (!iotHubConnectionString) {
 }
 console.log(`Using IoT Hub connection string [${iotHubConnectionString}]`);
 
+//const eventHubConsumerGroup = process.env.EventHubConsumerGroup;
 const eventHubConsumerGroup = "seeedzyz";
 console.log(eventHubConsumerGroup);
 if (!eventHubConsumerGroup) {

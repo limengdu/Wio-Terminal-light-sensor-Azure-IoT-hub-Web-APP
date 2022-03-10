@@ -55,8 +55,8 @@ $(document).ready(() => {
     datasets: [
       {
         fill: false,
-        label: 'light value',
-        yAxisID: 'light value',
+        label: 'Light',
+        yAxisID: 'Light',
         borderColor: 'rgba(255, 204, 0, 1)',
         pointBoarderColor: 'rgba(255, 204, 0, 1)',
         backgroundColor: 'rgba(255, 204, 0, 0.4)',
@@ -70,10 +70,10 @@ $(document).ready(() => {
   const chartOptions = {
     scales: {
       yAxes: [{
-        id: 'light',
+        id: 'Light',
         type: 'linear',
         scaleLabel: {
-          labelString: 'light',
+          labelString: 'Light',
           display: true,
         },
         position: 'left',
@@ -106,7 +106,7 @@ $(document).ready(() => {
 
   // When a web socket message arrives:
   // 1. Unpack it
-  // 2. Validate it has date/time
+  // 2. Validate it has date/time and temperature
   // 3. Find or create a cached device to hold the telemetry data
   // 4. Append the telemetry data
   // 5. Update the chart UI
